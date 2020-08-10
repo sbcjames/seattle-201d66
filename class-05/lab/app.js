@@ -56,8 +56,8 @@ function sumAndMultiply(a, b, c) {
   var q2 = sum(q1, c)[0];
   var multisum1 = multiply(a, b)[0];
   var multisum2 = multiply(multisum1, c)[0];
-  var string1 = `${a} and ${b} and ${c} sum to ${q2}`;
-  var string2 = `The product of ${a} and ${b} and ${c} is ${multisum2}`;
+  var string1 = `${a} and ${b} and ${c} sum to ${q2}.`;
+  var string2 = `The product of ${a} and ${b} and ${c} is ${multisum2}.`;
   return [q2, multisum2, string1, string2];
 }
 
@@ -104,11 +104,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
-
+  var multiply1 = multiply(multArr[0], multArr[1])[0];
+  var multiplyTwo = multiply(multiply1, multArr[2])[0];
+  var stringmult = 'The numbers ' + multArr + ' have a product of ' + multiplyTwo + '.'
+  return [multiplyTwo, stringmult];
 }
-
+var multArr = [2, 3, 4]
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
