@@ -8,14 +8,14 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
-// function sum(a, b) { //eslint-disable-line
-//   var finalSum = a + b;
-//   var string = `The sum of ${a} and ${b} is ${finalSum}.`
-//   return [finalSum, string];
-// }
+function sum(a, b) { //eslint-disable-line
+  var finalSum = a + b;
+  var string = `The sum of ${a} and ${b} is ${finalSum}.`
+  return [finalSum, string];
+}
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(5, 9);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -51,12 +51,18 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) { //eslint-disable-line
-
+function sumAndMultiply(a, b, c) {
+  var q1 = sum(a, b)[0];
+  var q2 = sum(q1, c)[0];
+  var multisum1 = multiply(a, b)[0];
+  var multisum2 = multiply(multisum1, c)[0];
+  var string1 = `${a} and ${b} and ${c} sum to ${q2}`;
+  var string2 = `The product of ${a} and ${b} and ${c} is ${multisum2}`;
+  return [q2, multisum2, string1, string2]
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
